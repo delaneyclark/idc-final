@@ -1,0 +1,73 @@
+/*** html ***/
+/*** shared space ***/
+/*** player space ***/
+
+body {
+    background-color: #424242;
+    font-family: sans;
+}
+
+#stage {
+    display: flex;
+    flex-flow: row-wrap;
+}
+
+@media all and (min-width: 800px) {
+    /* We invert order of first sidebar and main
+     * And tell the main element to take twice as much width as the other two sidebars 
+     */
+    .main { flex: 2 0px; }
+    
+    #player1 { order: 1; }
+    #center    { order: 2; }
+    #player2 { order: 3; }
+
+}
+
+h3 {
+    padding: 3%;
+    background-color: #8eacbb;
+}
+
+.element {
+    display:flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+#player1, #player2{
+    width: 40%;
+    margin: 0 auto;
+
+}
+
+@keyframes circle { 
+    to { transform: rotate(1turn); } 
+}
+
+#center button {
+    margin: 0 auto;
+    text-align: center;
+    }
+
+#center img {
+    animation: circle 2s infinite linear;
+
+}
+
+#deck1, #deck2 {
+    height:250px;;
+    width:100%;
+    /*    background-color: #B77B49; */
+    background-color: #34515e;
+
+}
+
+#board {
+    height: 400px;
+    width: 100%;
+    /*    background-color: #c7b4a4; */
+    background-color: #607d8b;
+
+}
+
